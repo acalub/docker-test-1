@@ -3,6 +3,6 @@ const app = express();
 const port = 3000;
 const pkg = require('./package.json');
 
-app.get('/', (req, res) => res.send(200, `Hello World! ${pkg.config.message}`))
+app.get('/', (req, res) => res.send(200, `Hello World! ${pkg.config.message} MSG IS ${process.env.MSG}`))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
